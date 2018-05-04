@@ -1,1 +1,8 @@
+
+## exported functions
+
+## not documented
+
+export('ADAM.panessprofile')
+
 exportPattern("^[[:alpha:]]+")
