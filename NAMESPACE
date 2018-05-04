@@ -4,5 +4,10 @@
 ## not documented
 
 export('ADAM.panessprofile')
+export('ADAM.randomisedepMat')
+export('ADAM.generateNullModel')
+export('ADAM.empiricalOdds')
+export('ADAM.truePositiveRate')
+export('ADAM.tradeoffEO_TPR')
 
 exportPattern("^[[:alpha:]]+")
