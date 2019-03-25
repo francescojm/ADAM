@@ -2,14 +2,16 @@
 \alias{ADAM.panessprofile}
 %- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Calculate profile of fitness genes across fixed numbers of cell lines.
+Calculate profile of number of fitness genes across fixed numbers of cell lines.
 }
 \description{
-This function calculates the number of essential genes in \emph{n} cell lines, varying \emph{n} from 1 to the number of cell lines in input.
-It also finds the cumulative number of genes depleted in at least x cell lines.
+This function calculates the numbers (and cumulative numbers) of fitness genes in \emph{n} cell lines, varying \emph{n} from 1 to the number of cell lines in the dataset in input.
 }
 \usage{
-ADAM.panessprofile(depMat,display,NLIMS,main_suffix,xlab)
+ADAM.panessprofile(depMat,
+                  display=TRUE,
+                  main_suffix='fitness genes in at least 1 cell line',
+                  xlab='n. dependent cell lines')
 }
 %- maybe also 'usage' for other objects documented here.
 \arguments{
