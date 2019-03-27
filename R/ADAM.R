@@ -1,6 +1,6 @@
-ADAM.panessprofile<-function(depMat,display=TRUE,NLIMS=1,
-                             main_suffix='genes depleted in at least 1 cell line',
-                             xlab='n. cell lines'){
+ADAM.panessprofile<-function(depMat,display=TRUE,
+                             main_suffix='fitness genes in at least 1 cell line',
+                             xlab='n. dependent cell lines'){
     depMat<-depMat[which(rowSums(depMat)>0),]
     panessprof<-rep(0,ncol(depMat))
     names(panessprof)<-as.character(1:ncol(depMat))
@@ -26,6 +26,9 @@ ADAM.panessprofile<-function(depMat,display=TRUE,NLIMS=1,
     }
     return(list(panessprof=panessprof,CUMsums=CUMsums))
 }
+
+
+
 ADAM.randomisedepMat<-function(depMat){
     rmat<-apply(depMat,2,sample)
 }

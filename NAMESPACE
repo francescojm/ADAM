@@ -1,9 +1,8 @@
 
 ## exported functions
+export('ADAM.panessprofile')
 
 ## not documented
-
-export('ADAM.panessprofile')
 export('ADAM.randomisedepMat')
 export('ADAM.generateNullModel')
 export('ADAM.empiricalOdds')
