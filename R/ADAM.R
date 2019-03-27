@@ -64,7 +64,6 @@ ADAM.generateNullModel<-function(depMat,ntrials=100,display=TRUE){
 
     return(list(nullProf=nullProf,nullCumSUM=nullCumSUM))
 }
-
 ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
 
     nsamples<-length(observedCumSum)
@@ -82,7 +81,6 @@ ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
     }
     return(odds)
 }
-
 ADAM.truePositiveRate<-function(depMat,essentialGeneSet){
     nsamples<-ncol(depMat)
 
@@ -109,7 +107,6 @@ ADAM.truePositiveRate<-function(depMat,essentialGeneSet){
 
     return(list(P=P,TP=TP,TPR=TPR))
 }
-
 ADAM.tradeoffEO_TPR<-function(EO,TPR,test_set_name,point=NULL){
 
     if(length(point)==0){
