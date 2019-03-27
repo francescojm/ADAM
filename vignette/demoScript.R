@@ -1,15 +1,21 @@
 #load in example binary depletion matrix
 data(exampleDepMat)
 
+# Generate the profiles of number of fitness genes across number of cell lines from observed data and
+# corresponding comulative sums.
+pprofile<-ADAM.panessprofile(depMat=exampleDepMat)
+
+# Generate a set of random profiles of number of genes depleted for a number of cell lines and corresponding
+# cumulative sums by perturbing observed data.
+nullmodel<-ADAM.generateNullModel(depMat=exampleDepMat,ntrials = 1000)
+
+
 
 
 
 #load in set of known essential genes
-load(BAGEL_essential)
-#Generate profiles of number of genes depleted for a number of cell lines from observed data.
-pprofile<-ADAM.panessprofile(depMat=depMat)
-#Generate a set of random profiles of number of genes depleted for a number of cell lines by perturbing observed data.
-nullmodel<-ADAM.generateNullModel(depMat=depMat)
+data(BAGEL_essential)
+
 #Calculate log10 odds ratio of observed/expected depletion profiles. Observed values from ADAM.panessprofile and expected as average of random set from ADAM.generateNullModle
 EO<-ADAM.empiricalOdds(observedCumSum = pprofile$CUMsums,simulatedCumSum =nullmodel$nullCumSUM )
 

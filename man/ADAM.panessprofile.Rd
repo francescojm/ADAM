@@ -1,11 +1,10 @@
 \name{ADAM.panessprofile}
 \alias{ADAM.panessprofile}
-%- Also NEED an '\alias' for EACH other topic documented here.
 \title{
-Calculate profile of number of fitness genes across fixed numbers of cell lines.
+Calculate profile of number of fitness genes across fixed numbers of cell lines and cumulative sums.
 }
 \description{
-This function calculates the numbers (and cumulative numbers) of fitness genes in \emph{n} cell lines, varying \emph{n} from 1 to the number of cell lines in the dataset in input.
+This function calculates the numbers (and cumulative numbers) of genes whose inactivation exerts a fitness effect in \emph{n} cell lines, varying \emph{n} from 1 to the number of cell lines in the dataset in input.
 }
 \usage{
 ADAM.panessprofile(depMat,
@@ -16,32 +15,26 @@ ADAM.panessprofile(depMat,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{depMat}{
-Binary dependency matrix, rows are genes and columns are samples. 1 indicates a gene was signficantly depleted for that sample, 0 otherwise.
+Binary dependency matrix, rows are genes and columns are samples. 1 in position \emp{[i,j]} indicates that inactivation of the \emp{i}th gene exerts a significant loss of fitness in the \emp{j}th sample, 0 otherwise.
 }
   \item{display}{
   Boolean, default is TRUE. Should bar plots of the dependency profiles be plotted
   }
   \item{main_suffix}{
-  	If display=TRUE, title to give to plot of number of genes depleted in a give number of cell lines, default is 'genes depleted in at least 1 cell line'
+  	If display=TRUE, title suffix to give to plot of number of genes depleted in a give number of cell lines, default is 'genes depleted in at least 1 cell line'
   }
   \item{xlab}{
-  	If display=TRUE, label to give to x-axis, default is 'n. cell lines'
+  	If display=TRUE, label to give to x-axis of the plots, default is 'n. cell lines'
   }
 }
 \details{
-
 }
 \value{
-%%  ~Describe the value returned
-%%  If it is a LIST, use
-%%  \item{comp1 }{Description of 'comp1'}
-%%  \item{comp2 }{Description of 'comp2'}
-%% ...
+A list with the following two named vectors:
 \item{panessprof}{Number of genes that are depleted for a number of cell lines}
 \item{CUMsums}{Cumulative number of genes depleted in at least x cell lines}
 }
 \references{
-%% ~put references to the literature/web site here ~
 }
 \author{
 F. Iorio
@@ -49,16 +42,13 @@ F. Iorio
 \note{
 %%  ~~further notes~~
 }
-
-%% ~Make other sections like Warning with \section{Warning }{....} ~
-
 \seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-	load(depMat)
-pprofile <- ADAM.panessprofile(depMat = depMat)
+data(exampleDepMat)
+pprofile <- ADAM.panessprofile(depMat = exampleDepMat)
+}
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{functions}% use one of  RShowDoc("KEYWORDS")
+

@@ -23,7 +23,6 @@ A binary matrix summarising the fitness effect status (1 = cellular fitness redu
 }
 \references{
 [1] Behan FM & Iorio F & Picco G et al., \emph{Prioritisation of cancer therapeutic targets using CRISPR-Cas9 screens}. \strong{Nature}, In press.
-
 }
 \examples{
 data(exampleDepMat)

@@ -27,11 +27,6 @@ ADAM.panessprofile<-function(depMat,display=TRUE,
     return(list(panessprof=panessprof,CUMsums=CUMsums))
 }
 
-
-
-ADAM.randomisedepMat<-function(depMat){
-    rmat<-apply(depMat,2,sample)
-}
 ADAM.generateNullModel<-function(depMat,ntrials=100,display=TRUE){
 
     depMat<-depMat[which(rowSums(depMat)>0),]
@@ -58,15 +53,25 @@ ADAM.generateNullModel<-function(depMat,ntrials=100,display=TRUE){
         par(mfrow=c(2,1))
         main=c(paste(ntrials,' randomised essentiality profiles of\n',nrow(depMat),' genes across ',ncol(depMat),' cell lines',
                      sep=''))
-        boxplot(nullProf,las=2,xlab='n cell lines',ylab='genes depleted in n cell lines',main=main)
+        boxplot(nullProf,las=2,xlab='n. cell lines',ylab='genes depleted in n cell lines',main=main)
         colnames(nullCumSUM)<-paste(">=",1:ncol(nullCumSUM))
-        boxplot(log10(nullCumSUM+1),las=2,main='Cumulative sums',xlab='n cell lines',
+        boxplot(log10(nullCumSUM+1),las=2,main='Cumulative sums',xlab='n. cell lines',
                 ylab='log10 [number of genes + 1]',
                 cex.axis=0.8)
     }
 
     return(list(nullProf=nullProf,nullCumSUM=nullCumSUM))
 }
+
+
+
+### non documented
+
+
+ADAM.randomisedepMat<-function(depMat){
+    rmat<-apply(depMat,2,sample)
+}
+
 ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
 
     nsamples<-length(observedCumSum)

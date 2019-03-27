@@ -1,10 +1,10 @@
 
 ## exported functions
 export('ADAM.panessprofile')
+export('ADAM.generateNullModel')
 
 ## not documented
 export('ADAM.randomisedepMat')
-export('ADAM.generateNullModel')
 export('ADAM.empiricalOdds')
 export('ADAM.truePositiveRate')
 export('ADAM.tradeoffEO_TPR')
