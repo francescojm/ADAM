@@ -1,11 +1,10 @@
-Package: ADAM
+Package: ADaM
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Adaptive Daisy Model
 Version: 0.1.0
-Author: Who wrote it
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: More about what it does (maybe more than one line)
-    Use four spaces when indenting paragraphs within the Description.
+Author: Clare Pacini and Francesco Iorio
+Maintainer: Francesco Iorio <francesco.iorio@sanger.ac.uk>
+Description: The ADaM package implements a semi-supervised algorithm to compute the fuzzy-intersection of non-fuzzy sets, such that the deviance from expectation of its cardinality is maximised as well as the coverage of predefined elements. 
 License: What license is it under?
 Encoding: UTF-8
 LazyData: true
