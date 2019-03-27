@@ -16,4 +16,4 @@ Contributors: Clare Pacini & Francesco Iorio
 
 Refereneces:
 
-[1]  Behan FM & Iorio F & Picco G et al., Prioritisation of cancer therapeutic targets using CRISPR-Cas9 screens}. Nature, In press.
+[1]  Behan FM & Iorio F & Picco G et al., Prioritisation of cancer therapeutic targets using CRISPR-Cas9 screens. Nature, In press.
