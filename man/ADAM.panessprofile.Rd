@@ -37,7 +37,7 @@ A list with the following two named vectors:
 \references{
 }
 \author{
-F. Iorio
+C. Pacini & F. Iorio
 }
 \note{
 %%  ~~further notes~~

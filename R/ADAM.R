@@ -63,14 +63,11 @@ ADAM.generateNullModel<-function(depMat,ntrials=100,display=TRUE){
     return(list(nullProf=nullProf,nullCumSUM=nullCumSUM))
 }
 
-
-
-### non documented
-
-
 ADAM.randomisedepMat<-function(depMat){
     rmat<-apply(depMat,2,sample)
 }
+
+### non documented
 
 ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
 

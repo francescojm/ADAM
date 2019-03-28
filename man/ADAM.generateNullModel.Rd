@@ -34,7 +34,7 @@ A list with the following two matrices
 %% ~put references to the literature/web site here ~
 }
 \author{
-F. Iorio
+C. Pacini & F. Iorio
 }
 \note{
 %%  ~~further notes~~

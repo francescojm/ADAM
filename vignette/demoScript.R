@@ -9,12 +9,12 @@ pprofile<-ADAM.panessprofile(depMat=exampleDepMat)
 # cumulative sums by perturbing observed data.
 nullmodel<-ADAM.generateNullModel(depMat=exampleDepMat,ntrials = 1000)
 
+#load a reference set of essential genes
+data(curated_BAGEL_essential)
 
 
 
 
-#load in set of known essential genes
-data(BAGEL_essential)
 
 #Calculate log10 odds ratio of observed/expected depletion profiles. Observed values from ADAM.panessprofile and expected as average of random set from ADAM.generateNullModle
 EO<-ADAM.empiricalOdds(observedCumSum = pprofile$CUMsums,simulatedCumSum =nullmodel$nullCumSUM )
