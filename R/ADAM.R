@@ -67,8 +67,6 @@ ADAM.randomisedepMat<-function(depMat){
     rmat<-apply(depMat,2,sample)
 }
 
-### non documented
-
 ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
 
     nsamples<-length(observedCumSum)
@@ -86,6 +84,8 @@ ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
     }
     return(odds)
 }
+
+### non documented
 ADAM.truePositiveRate<-function(depMat,essentialGeneSet){
     nsamples<-ncol(depMat)
 
@@ -159,7 +159,4 @@ ADAM.tradeoffEO_TPR<-function(EO,TPR,test_set_name,point=NULL){
     legend('top',paste(format(100*orTPR[point],digits=2),'% covered',sep=''),bg = NULL,bty = 'n')
 
     return(point)
-
-
-
 }

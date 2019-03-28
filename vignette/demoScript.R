@@ -12,12 +12,12 @@ nullmodel<-ADAM.generateNullModel(depMat=exampleDepMat,ntrials = 1000)
 #load a reference set of essential genes
 data(curated_BAGEL_essential)
 
-
-
-
-
-#Calculate log10 odds ratio of observed/expected depletion profiles. Observed values from ADAM.panessprofile and expected as average of random set from ADAM.generateNullModle
+# Calculate log10 odd ratios of observed/expected profiles of cumulative number of fitness genes in fixed number of cell lines
 EO<-ADAM.empiricalOdds(observedCumSum = pprofile$CUMsums,simulatedCumSum =nullmodel$nullCumSUM )
+
+
+
+# Observed values are from the ADAM.panessprofile function and expected are the average of random set from ADAM.generateNullModle
 
 #Calculate True positive rates for genes in observed depletion matrix with true positives being in the known set of essential genes.
 TPR<-ADAM.truePositiveRate(depMat,BAGEL_essential)
