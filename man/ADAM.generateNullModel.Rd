@@ -13,7 +13,7 @@ ADAM.generateNullModle(depMat,ntrials=100,display=TRUE)
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{depMat}{
-Binary dependency matrix, rows are genes and columns are samples. 1 in position \emp{[i,j]} indicates that inactivation of the \emp{i}th gene exerts a significant loss of fitness in the \emp{j}th sample, 0 otherwise.
+Binary dependency matrix, rows are genes and columns are samples. 1 in position \emph{[i,j]} indicates that inactivation of the \emph{i}-th gene exerts a significant loss of fitness in the \emph{j}-th sample, 0 otherwise.
 }
   \item{ntrials}{
   Integer, default =100. How many times to randomly perturb dependency matrix to generate the null distributions.

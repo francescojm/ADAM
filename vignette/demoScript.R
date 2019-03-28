@@ -13,15 +13,20 @@ nullmodel<-ADAM.generateNullModel(depMat=exampleDepMat,ntrials = 1000)
 data(curated_BAGEL_essential)
 
 # Calculate log10 odd ratios of observed/expected profiles of cumulative number of fitness genes in fixed number of cell lines
+# Observed values are from the ADAM.panessprofile function and expected are the average of random set from ADAM.generateNullModle
 EO<-ADAM.empiricalOdds(observedCumSum = pprofile$CUMsums,simulatedCumSum =nullmodel$nullCumSUM )
 
+# Calculate True positive rates for fitness genes in at least n cell lines in the observed dependency matrix,
+# with positive cases from a reference set of essential genes
+TPR<-ADAM.truePositiveRate(exampleDepMat,curated_BAGEL_essential)
 
 
-# Observed values are from the ADAM.panessprofile function and expected are the average of random set from ADAM.generateNullModle
 
-#Calculate True positive rates for genes in observed depletion matrix with true positives being in the known set of essential genes.
-TPR<-ADAM.truePositiveRate(depMat,BAGEL_essential)
-#Calculate minimum number of cell lines a gene needs to be depleted in to be classes as essential
+
+
+# Calculate minimum number of cell lines a gene needs to be a fitness gene in order to be considered
+# as a core-fitness gene
 crossoverpoint<-ADAM.tradeoffEO_TPR(EO,TPR$TPR,filename=filename)
+
 #essential genes is the list of genes classed as essential by AdAM.
 essentialgenes<-rownames(depMat)[rowSums(depMat)>=crossoverpoint]

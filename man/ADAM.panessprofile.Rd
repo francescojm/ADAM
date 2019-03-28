@@ -15,7 +15,7 @@ ADAM.panessprofile(depMat,
 %- maybe also 'usage' for other objects documented here.
 \arguments{
   \item{depMat}{
-Binary dependency matrix, rows are genes and columns are samples. 1 in position \emp{[i,j]} indicates that inactivation of the \emp{i}th gene exerts a significant loss of fitness in the \emp{j}th sample, 0 otherwise.
+Binary dependency matrix, rows are genes and columns are samples. 1 in position \emph{[i,j]} indicates that inactivation of the \emph{i}-th gene exerts a significant loss of fitness in the \emph{j}-th sample, 0 otherwise.
 }
   \item{display}{
   Boolean, default is TRUE. Should bar plots of the dependency profiles be plotted
