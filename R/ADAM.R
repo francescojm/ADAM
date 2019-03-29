@@ -85,7 +85,6 @@ ADAM.empiricalOdds<-function(observedCumSum,simulatedCumSum){
     return(odds)
 }
 
-### non documented
 ADAM.truePositiveRate<-function(depMat,essentialGeneSet){
     nsamples<-ncol(depMat)
 
@@ -112,13 +111,9 @@ ADAM.truePositiveRate<-function(depMat,essentialGeneSet){
 
     return(list(P=P,TP=TP,TPR=TPR))
 }
-ADAM.tradeoffEO_TPR<-function(EO,TPR,test_set_name,point=NULL){
 
-    if(length(point)==0){
-        CCOL<-'red'
-    }else{
-        CCOL<-rgb(255,0,0,alpha = 100,maxColorValue = 255)
-    }
+ADAM.tradeoffEO_TPR<-function(EO,TPR,test_set_name){
+    CCOL<-'red'
 
     x<-EO
     x[x==Inf]<-max(x[x<Inf])
@@ -144,18 +139,14 @@ ADAM.tradeoffEO_TPR<-function(EO,TPR,test_set_name,point=NULL){
     plot(TPR,type='l',xlab='',ylab='',axes=FALSE,lwd=4,col='blue',ylim=c(0,1),xlim=c(0,length(EO)))
     axis(4,at = seq(0,1,0.2),format(seq(min(orTPR),max(orTPR),(max(orTPR)-min(orTPR))/5),digits=2))
 
-    if(length(point)==0){
-        point<-min(which(!y>x))
 
-        abline(v=point)
-        abline(h=y[point],lty=2)
+    point<-min(which(!y>x))
 
-        points(point,y[point],pch=16,cex=2)
-    }else{
-        abline(v=point)
-        abline(h=y[point],lty=2)
-        points(point,y[point],pch=16,cex=2)
-    }
+    abline(v=point)
+    abline(h=y[point],lty=2)
+
+    points(point,y[point],pch=16,cex=2)
+
     legend('top',paste(format(100*orTPR[point],digits=2),'% covered',sep=''),bg = NULL,bty = 'n')
 
     return(point)

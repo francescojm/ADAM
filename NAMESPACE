@@ -1,12 +1,16 @@
+importFrom("graphics",
+           "abline", "axis", "barplot", "boxplot","legend", "par", "plot", "points")
+importFrom("stats", "density")
+importFrom("utils", "setTxtProgressBar", "txtProgressBar")
 
 ## exported functions
 export('ADAM.panessprofile')
 export('ADAM.generateNullModel')
-
-## not documented
 export('ADAM.randomisedepMat')
 export('ADAM.empiricalOdds')
 export('ADAM.truePositiveRate')
 export('ADAM.tradeoffEO_TPR')
 
 exportPattern("^[[:alpha:]]+")
+
+import(stats)

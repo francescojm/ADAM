@@ -21,12 +21,9 @@ EO<-ADAM.empiricalOdds(observedCumSum = pprofile$CUMsums,simulatedCumSum =nullmo
 TPR<-ADAM.truePositiveRate(exampleDepMat,curated_BAGEL_essential)
 
 
-
-
-
 # Calculate minimum number of cell lines a gene needs to be a fitness gene in order to be considered
 # as a core-fitness gene
-crossoverpoint<-ADAM.tradeoffEO_TPR(EO,TPR$TPR,filename=filename)
+crossoverpoint<-ADAM.tradeoffEO_TPR(EO,TPR$TPR,test_set_name = 'curated BAGEL essential')
 
-#essential genes is the list of genes classed as essential by AdAM.
-essentialgenes<-rownames(depMat)[rowSums(depMat)>=crossoverpoint]
+#coreFitnessGenes is the list of genes predicted as core-fitness by AdAM.
+coreFitnessGenes<-rownames(exampleDepMat)[rowSums(exampleDepMat)>=crossoverpoint]
