@@ -1,6 +1,6 @@
 # ADAM
 
-![alt text](https://github.com/francescojm/ADAM/blob/master/html/ADaM_logo.jpg)
+![alt text](https://github.com/francescojm/ADAM/blob/master/html_comp/ADaM_logo.jpg)
 
 The ADaM package implements a semi-supervised algorithm for computing a fuzzy-intersection of non-fuzzy sets by adaptively 
 determining the minimal number of sets to which an element should belong in order to be a member of the fuzzy-intersection (the membership threshold).
