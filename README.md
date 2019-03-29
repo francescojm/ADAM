@@ -17,6 +17,6 @@ Contributors: Clare Pacini & Francesco Iorio
 
 Refereneces:
 
-[1]  Behan FM & Iorio F & Picco G et al., Prioritisation of cancer therapeutic targets using CRISPR-Cas9 screens. Nature, In press.
+[1]  Behan FM & Iorio F & Picco G et al., In press.
 
 [2]  Hart T et al., High-Resolution CRISPR Screens Reveal Fitness Genes and Genotype-Specific Cancer Liabilities. Cell. 2015;163:1515–26.
