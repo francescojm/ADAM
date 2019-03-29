@@ -9,7 +9,7 @@ This threshold maximises the deviance from expectation of the cardinality of the
 
 This method can be used to identify the minimal number of cell lines from a given tissue in which the inactivation of a gene (for example via CRISPR-Cas9 targeting) should exert a reduction of viabilty (or fitness effect) in order for that gene to be considered a core-fitness essential gene for the tissue under consideration.
 
-This method is used to discriminate between core-fitness and context-specific essential genes in a study describing a large scale genome-wide CRISPR-Cas9 pooled drop-out screening [1].
+This method is used to discriminate between core-fitness and context-specific essential genes in a study describing a large scale genome-wide CRISPR-Cas9 pooled drop-out screening [1] (a detailed description of the algorithm is included in the Supplemental Information of [1]).
 
 Contributors: Clare Pacini & Francesco Iorio
 
